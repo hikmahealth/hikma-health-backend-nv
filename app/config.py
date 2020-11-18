@@ -9,9 +9,9 @@ if ENV in ('dev_local', 'dev_docker', 'stg'):
     elif ENV == 'dev_docker':
         PG_HOST = 'db'
 
-    PG_USER = 'hikma_dev'
+    PG_USER = 'hikma_dev_nv'
     PG_PASSWORD = 'password'
-    PG_DB = 'hikma_dev'
+    PG_DB = 'hikma_dev_nv'
     FLASK_DEBUG = True
     PHOTOS_STORAGE_BUCKET = 'dev-api-photos'
     EXPORTS_STORAGE_BUCKET = 'dev-api-exports'
