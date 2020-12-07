@@ -92,3 +92,4 @@ class PatientDataExporter:
         if age < timedelta(days=365):
             return f'{(age.days // 30) + 1} months'
         return f'{(age.days // 365)} years'
+        
