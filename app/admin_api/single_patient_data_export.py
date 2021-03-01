@@ -53,31 +53,23 @@ class SinglePatientDataExporter:
             )
             for event in events_by_visit(visit.id):
                 if event.event_type == 'Allergies':
-                    self.write_text_event(
-                        row, 'allergies', event.event_metadata)
+                    self.write_text_event(row, 'allergies', event.event_metadata)
                 elif event.event_type == 'Medicine Dispensed':
-                    self.write_text_event(
-                        row, 'dispensed_medicine_1', event.event_metadata)
+                    self.write_text_event(row, 'dispensed_medicine_1', event.event_metadata)
                 elif event.event_type == 'Medical History':
-                    write_medical_hx_event(
-                        row, event.event_metadata)
+                    write_medical_hx_event(row, event.event_metadata)
                 elif event.event_type == 'Complaint':
-                    self.write_text_event(
-                        row, 'presenting_complaint', event.event_metadata)
+                    self.write_text_event(row, 'presenting_complaint', event.event_metadata)
                 elif event.event_type == 'Vitals':
                     write_vitals_event(row, event)
                 elif event.event_type == 'Evaluation':
-                    write_evaluation_event(
-                        row, event.event_metadata)
+                    write_evaluation_event(row, event)
                 elif event.event_type == 'Diagnosis':
-                    self.write_text_event(
-                        row, 'diagnosis', event.event_metadata)
+                    self.write_text_event(row, 'diagnosis', event.event_metadata)
                 elif event.event_type == 'Treatment':
-                    self.write_text_event(
-                        row, 'treatment', event.event_metadata)
+                    self.write_text_event(row, 'treatment', event.event_metadata)
                 elif event.event_type == 'Prescriptions':
-                    self.write_text_event(
-                        row, 'prescription', event.event_metadata)
+                    self.write_text_event(row, 'prescription', event.event_metadata)
                 elif event.event_type == 'Notes':
                     self.write_text_event(row, 'notes', event.event_metadata)
                 elif event.event_type == 'Camp':

@@ -19,6 +19,7 @@ def write_vitals_event(row: PatientDataRow, event):
 def write_evaluation_event(row: PatientDataRow, event):
     data = json.loads(event.event_metadata)
     row.doctor = data.get('doctor')
+    row.visit_date = data.get('visitDate')
     row.reason = data.get('reason')
     row.observations = data.get('observations')
     row.medications = data.get('medications')
@@ -36,6 +37,7 @@ def write_evaluation_event(row: PatientDataRow, event):
 
 def write_medical_hx_event(row: PatientDataRow, event):
     data = json.loads(event.event_metadata)
+    row.doctor = data.get('doctor')
     row.malnutrition = data.get('malnutrition')
     row.prenatal = data.get('prenatal')
     row.sexual_hx = data.get('sexualHx')

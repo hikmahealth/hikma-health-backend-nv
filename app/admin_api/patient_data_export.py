@@ -69,7 +69,7 @@ class PatientDataExporter:
                 elif event.event_type == 'Vitals':
                     write_vitals_event(row, event)
                 elif event.event_type == 'Examination':
-                    write_evaluation_event(row, event.event_metadata)
+                    write_evaluation_event(row, event)
                 elif event.event_type == 'Diagnosis':
                     self.write_text_event(row, 'diagnosis', event.event_metadata)
                 elif event.event_type == 'Treatment':
