@@ -511,7 +511,7 @@ COLUMNS = ['visit_date',
            'fractures',
            'pneumonia',
            'pulmonary_nodule',
-           'osteoarthritis',
+           'osteoarthritis_xray',
            'osteoporosis',
            'ectopic_kidney',
            'rinon_herradura',
@@ -1039,7 +1039,7 @@ class PatientDataRow:
     fractures: str = None
     pneumonia: str = None
     pulmonary_nodule: str = None
-    osteoarthritis: str = None
+    osteoarthritis_xray: str = None
     osteoporosis: str = None
     ectopic_kidney: str = None
     rinon_herradura: str = None

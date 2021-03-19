@@ -536,7 +536,7 @@ def write_xray_results_event(row:PatientDataRow, event):
     row.fractures = get_text_field(data, 'fractures', 'fracturesText')
     row.pneumonia = get_text_field(data, 'pneumonia', 'pneumoniaText')
     row.pulmonary_nodule = get_text_field(data, 'pulmonaryNodule', 'pulmonaryNoduleText')
-    row.osteoarthritis = get_text_field(data, 'osteoarthritis', 'osteoarthritisText')
+    row.osteoarthritis_xray = get_text_field(data, 'osteoarthritis', 'osteoarthritisText')
     row.osteoporosis = get_text_field(data, 'osteoporosis', 'osteoporosisText')
     row.ectopic_kidney = get_text_field(data, 'ectopicKidney', 'ectopicKidneyText')
     row.rinon_herradura = get_text_field(data, 'rinonHerradura', 'rinonHerraduraText')
