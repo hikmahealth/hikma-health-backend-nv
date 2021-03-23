@@ -27,6 +27,7 @@ COLUMNS = ['visit_date',
            'age',
            'gender',
            'home_country',
+           'phone',
            # patient details
            'medical_num',
            'dental_num',
@@ -124,6 +125,7 @@ COLUMNS = ['visit_date',
            'conjunctivitis',
            'covid',
            'malnourishment',
+           'diabetes',
            'migraines',
            'diarrhea',
            'ecocardiogram',
@@ -222,7 +224,7 @@ COLUMNS = ['visit_date',
            'serology_test',
            'stool_test',
            'fecal_antigens',
-           'blood_type',
+           'blood_type_lo',
            'HIV_test',
            'other_lo',
            # Lab tests
@@ -276,7 +278,7 @@ COLUMNS = ['visit_date',
            'serology_VDRL',
            'serology_VIH',
            'serology_VSG',
-           'blood_type',
+           'blood_type_lt',
            'RH_factor',
            # Lab urine tests
            'doctor_lu',
@@ -555,6 +557,7 @@ class PatientDataRow:
     age: str = None
     gender: str = None
     home_country: str = None
+    phone: str = None
     # patient details -- need event export still
     medical_num: str = None
     dental_num: str = None
@@ -652,6 +655,7 @@ class PatientDataRow:
     conjunctivitis: str = None
     covid: str = None
     malnourishment: str = None
+    diabetes: str = None
     migraines: str = None
     diarrhea: str = None
     ecocardiogram: str = None
@@ -750,7 +754,7 @@ class PatientDataRow:
     serology_test: bool = None
     stool_test: bool = None
     fecal_antigens: bool = None
-    blood_type: bool = None
+    blood_type_lo: bool = None
     HIV_test: bool = None
     other_lo: str = None
     # Lab tests
@@ -804,7 +808,7 @@ class PatientDataRow:
     serology_VDRL: bool = None
     serology_VIH: bool = None
     serology_VSG: bool = None
-    blood_type: bool = None
+    blood_type_lt: bool = None
     RH_factor: bool = None
     # Lab urine tests
     doctor_lu: bool = None

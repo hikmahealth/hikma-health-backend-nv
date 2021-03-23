@@ -122,7 +122,8 @@ def write_med_pathologies_event(row: PatientDataRow, event):
     row.infant_colic = get_text_field(data, 'infantColic', 'infantColicText') 
     row.conjunctivitis = get_text_field(data, 'conjunctivitis', 'conjunctivitisText') 
     row.covid = get_text_field(data, 'covid', 'covidText') 
-    row.malnourishment = get_text_field(data, 'malnourishment', 'malnourishmentText') 
+    row.malnourishment = get_text_field(data, 'malnourishment', 'malnourishmentText')
+    row.diabetes = get_text_field(data, 'diabetes', 'diabetesText')
     row.migraines = get_text_field(data, 'migraines', 'migrainesText') 
     row.diarrhea = get_text_field(data, 'diarrhea', 'diarrheaText') 
     row.ecocardiogram = get_text_field(data, 'ecocardiogram', 'ecocardiogramText') 
@@ -227,7 +228,7 @@ def write_lab_orders_event(row:PatientDataRow, event):
     row.serology_test = data.get('serologyTest')
     row.stool_test = data.get('stoolTest')
     row.fecal_antigens = data.get('fecalAntigens')
-    row.blood_type = data.get('bloodType')
+    row.blood_type_lo = data.get('bloodType')
     row.HIV_test = data.get('HIVTest')
     row.other_lo = data.get('other')
 
@@ -283,7 +284,7 @@ def write_lab_tests_event(row:PatientDataRow, event):
     row.serology_VDRL = data.get('serologyVDRL')
     row.serology_VIH = data.get('serologyVIH')
     row.serology_VSG = data.get('serologyVSG')
-    row.blood_type = data.get('bloodType')
+    row.blood_type_lt = data.get('bloodType')
     row.RH_factor = data.get('RHFactor')
 
 def write_urine_tests_event(row:PatientDataRow, event):
