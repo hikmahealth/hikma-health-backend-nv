@@ -95,7 +95,7 @@ def change_password(_admin_user):
 @admin_authenticated
 def export_all_data(_admin_user):
     export_filename = most_recent_export()
-    return send_file(export_filename, attachment_filename='hikma_export.xlsx')
+    return send_file(export_filename)
 
 
 @admin_api.route('/all_patients', methods=['GET'])
@@ -118,4 +118,4 @@ def search(_admin_user):
 def export_patient_data(_admin_user):
     params = assert_data_has_keys(request, {'patient_id'})
     export_filename = single_patient_export(params['patient_id'])
-    return send_file(export_filename, attachment_filename='hikma_patient_export.xlsx')
+    return send_file(export_filename)
