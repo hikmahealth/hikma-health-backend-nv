@@ -75,19 +75,19 @@ def search_patients(given_name: str, surname: str, country: str, hometown: str):
     where_clauses = []
     params = []
     if given_name is not None:
-        where_clauses.append("UPPER(get_string(given_name, 'en')) LIKE %s")
+        where_clauses.append("UPPER(get_string(given_name, 'sp')) LIKE %s")
         params.append(f'%{given_name.upper()}%')
 
     if surname is not None:
-        where_clauses.append("UPPER(get_string(surname, 'en')) LIKE %s")
+        where_clauses.append("UPPER(get_string(surname, 'sp')) LIKE %s")
         params.append(f'%{surname.upper()}%')
 
     if country is not None:
-        where_clauses.append("UPPER(get_string(country, 'en')) LIKE %s")
+        where_clauses.append("UPPER(get_string(country, 'sp')) LIKE %s")
         params.append(f'%{country.upper()}%')
 
     if hometown is not None:
-        where_clauses.append("UPPER(get_string(hometown, 'en')) LIKE %s")
+        where_clauses.append("UPPER(get_string(hometown, 'sp')) LIKE %s")
         params.append(f'%{hometown.upper()}%')
 
     where_clause = ' AND '.join(where_clauses)
