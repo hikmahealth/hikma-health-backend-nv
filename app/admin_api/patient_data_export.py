@@ -1,7 +1,7 @@
 from admin_api.patient_data_import import PatientDataRow, COLUMNS
 from visits.data_access import all_visits
 from openpyxl import load_workbook
-from events.data_access import events_by_visit
+from events.data_access import events_by_visit, patient_details
 from patients.data_access import patient_from_id
 from events.event_export import (write_vitals_event, write_medical_hx_event, write_evaluation_event, write_patient_details_event,
                                  write_med_stock_event, write_med_otc_event, write_controlled_med_event, write_med_pathologies_event, write_psych_pathologies_event, write_household_event,
@@ -59,8 +59,12 @@ class PatientDataExporter:
                 surname=patient.surname.get('en'),
                 age=self.age_string_from_dob(patient.date_of_birth),
                 gender=patient.sex,
-                home_country=patient.country.get('en')
+                home_country=patient.country.get('en'),
+                phone=patient.phone
             )
+            patient_details_event = patient_details(visit.patient_id)
+            if patient_details_event is not None:
+                write_patient_details_event(row, patient_details_event)
             for event in events_by_visit(visit.id):
                 if event.event_type == 'Medical History':
                     write_medical_hx_event(row, event)
