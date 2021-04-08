@@ -48,7 +48,7 @@ class SinglePatientDataExporter:
             if not patient:
                 continue
             row = PatientDataRow(
-                visit_date=visit.check_in_timestamp,
+                visit_date=visit.check_in_timestamp.strftime("%Y-%m-%d"),
                 first_name=patient.given_name.get('en'),
                 surname=patient.surname.get('en'),
                 age=self.age_string_from_dob(patient.date_of_birth),
