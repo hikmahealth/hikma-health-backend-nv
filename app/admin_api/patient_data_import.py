@@ -196,7 +196,7 @@ COLUMNS = ['visit_date',
            'psychosis',
            'suicidal',
            'personality_disorders',
-           'trauma',
+           'trauma_pp',
            'psychological_evaluations',
            'domestic_violence_family',
            'domestic_violence_spouse',
@@ -344,7 +344,7 @@ COLUMNS = ['visit_date',
            'herpes',
            'inflammation',
            'trichomonas',
-           'other',
+           'other_pap',
            # Ultrasound
            'doctor_u',
            'abdominal',
@@ -360,7 +360,7 @@ COLUMNS = ['visit_date',
            'prostate',
            'renal',
            'testicular',
-           'other',
+           'other_u',
            'goiter',
            'wrapped_cord',
            'cholelithiasis',
@@ -454,7 +454,7 @@ COLUMNS = ['visit_date',
            'sealant',
            'teaching',
            'impression',
-           'other',
+           'other_dt',
            # Program Trainings
            'doctor_pt',
            'asthma_subject',
@@ -726,7 +726,7 @@ class PatientDataRow:
     psychosis: str = None
     suicidal: str = None
     personality_disorders: str = None
-    trauma: str = None
+    trauma_pp: str = None
     psychological_evaluations: str = None
     domestic_violence_family: str = None
     domestic_violence_spouse: str = None
@@ -874,7 +874,7 @@ class PatientDataRow:
     herpes: str = None
     inflammation: str = None
     trichomonas: str = None
-    other: str = None
+    other_pap: str = None
     # Ultrasound
     doctor_u: bool = None
     abdominal: bool = None
@@ -890,7 +890,7 @@ class PatientDataRow:
     prostate: bool = None
     renal: bool = None
     testicular: bool = None
-    other: bool = None
+    other_u: bool = None
     goiter: str = None
     wrapped_cord: str = None
     cholelithiasis: str = None
@@ -984,7 +984,7 @@ class PatientDataRow:
     sealant: str = None
     teaching: str = None
     impression: str = None
-    other: str = None
+    other_dt: str = None
     # Program Trainings
     doctor_pt: str = None
     asthma_subject: str = None
