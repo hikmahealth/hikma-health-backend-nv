@@ -407,27 +407,7 @@ COLUMNS = ['visit_date',
            'permanent_partner',
            # Dental Origin
            'doctor_do',
-           'bernabe',
-           'canon',
-           'club_la_esperanza',
-           'el_shaddai',
-           'hogar',
-           'jinotepe',
-           'la_hermosa',
-           'leon_de_juda',
-           'los_ninn',
-           'luz_vida',
-           'manantial_de_vida',
-           'maranatha',
-           'matagalpa',
-           'monte_de_sion',
-           'nueva_jerusalen',
-           'obrero_levitico',
-           'posoltega_jose_lara',
-           'rios_de_agua_viva',
-           'rivas',
-           'verbo_sur',
-           'jubilee_house_community',
+           'feeding_center',
            'other_feeding_center',
            # Dental Treatment
            'doctor_dt',
@@ -937,27 +917,7 @@ class PatientDataRow:
     permanent_partner: bool = None
     # Dental Origin
     doctor_do: str = None
-    bernabe: str = None
-    canon: str = None
-    club_la_esperanza: str = None
-    el_shaddai: str = None
-    hogar: str = None
-    jinotepe: str = None
-    la_hermosa: str = None
-    leon_de_juda: str = None
-    los_ninn: str = None
-    luz_vida: str = None
-    manantial_de_vida: str = None
-    maranatha: str = None
-    matagalpa: str = None
-    monte_de_sion: str = None
-    nueva_jerusalen: str = None
-    obrero_levitico: str = None
-    posoltega_jose_lara: str = None
-    rios_de_agua_viva: str = None
-    rivas: str = None
-    verbo_sur: str = None
-    jubilee_house_community: str = None
+    feeding_center: str = None
     other_feeding_center: str = None
     # Dental Treatment
     doctor_dt: str = None

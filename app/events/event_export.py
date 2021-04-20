@@ -21,6 +21,11 @@ def get_text_field_positive(data, field, text_field):
         return 'Positivo' if data.get(field) else 'Negativo'
     return data.get(text_field) if data.get(field) else 'Negativo' 
 
+def get_feeding_center(data):
+    if data.get('feedingCenter') == 'Other':
+        return 'Otro'
+    return data.get('feedingCenter')    
+
 def write_patient_details_event(row: PatientDataRow, event):
     data = json.loads(event.event_metadata)
     row.medical_num = data.get('medicalNum')
@@ -434,27 +439,7 @@ def write_family_planning_event(row:PatientDataRow, event):
 def write_dental_origin_event(row:PatientDataRow, event):
     data = json.loads(event.event_metadata)
     row.doctor_do = data.get('doctor')
-    row.bernabe = get_field(data, 'bernabe')
-    row.canon = get_field(data, 'canon')
-    row.club_la_esperanza = get_field(data, 'clubLaEsperanza')
-    row.el_shaddai = get_field(data, 'elShaddai')
-    row.hogar = get_field(data, 'hogar')
-    row.jinotepe = get_field(data, 'jinotepe')
-    row.la_hermosa = get_field(data, 'laHermosa')
-    row.leon_de_juda = get_field(data, 'leonDeJuda')
-    row.los_ninn = get_field(data, 'losNinn')
-    row.luz_vida = get_field(data, 'luzVida')
-    row.manantial_de_vida = get_field(data, 'manantialDeVida')
-    row.maranatha = get_field(data, 'maranatha')
-    row.matagalpa = get_field(data, 'matagalpa')
-    row.monte_de_sion = get_field(data, 'monteDeSion')
-    row.nueva_jerusalen = get_field(data, 'nuevaJerusalen')
-    row.obrero_levitico = get_field(data, 'obreroLevitico')
-    row.posoltega_jose_lara = get_field(data, 'posoltegaJoseLara')
-    row.rios_de_agua_viva = get_field(data, 'riosDeAguaViva')
-    row.rivas = get_field(data, 'rivas')
-    row.verbo_sur = get_field(data, 'verboSur')
-    row.jubilee_house_community = get_field(data, 'jubileeHouseCommunity')
+    row.feeding_center = get_feeding_center(data)
     row.other_feeding_center = data.get('otherFeedingCenter')
 
 def write_dental_treatment_event(row:PatientDataRow, event):
