@@ -60,8 +60,6 @@ def write_vitals_event(row: PatientDataRow, event):
     row.o2_sats = data.get('sats')
     row.height = data.get('height')
     row.temperature = data.get('temp')
-    row.blood_type = data.get('bloodType')
-
 
 def write_medical_hx_event(row: PatientDataRow, event):
     data = json.loads(event.event_metadata)
@@ -74,6 +72,7 @@ def write_medical_hx_event(row: PatientDataRow, event):
     row.family_hx = data.get('familyHx')
     row.surgery_hx = data.get('surgeryHx')
     row.vaccinations = data.get('vaccinations')
+    row.blood_type = data.get('bloodType')
 
 def write_evaluation_event(row: PatientDataRow, event):
     data = json.loads(event.event_metadata)

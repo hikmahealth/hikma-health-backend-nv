@@ -58,7 +58,6 @@ COLUMNS = ['visit_date',
            'o2_sats',
            'height',
            'temperature',
-           'blood_type',
            'notes',
            # medical_hx
            'doctor_mh',
@@ -70,6 +69,7 @@ COLUMNS = ['visit_date',
            'family_hx',
            'surgery_hx',
            'vaccinations',
+           'blood_type',
            # evaluation
            'doctor_ce',
            'visit_date',
@@ -568,7 +568,6 @@ class PatientDataRow:
     o2_sats: float = None
     height: float = None
     temperature: float = None
-    blood_type: str = None
     notes: str = None
     # medical_hx
     doctor_mh: str = None
@@ -580,6 +579,7 @@ class PatientDataRow:
     family_hx: str = None
     surgery_hx: str = None
     vaccinations: str = None
+    blood_type: str = None
     # evaluation
     doctor_ce: str = None
     visit_date: str = None
